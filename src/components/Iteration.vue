@@ -42,6 +42,8 @@ let movieArray = [
   }
 ]
 let movies = ref(movieArray)
+
+const formData = ref({ username: '', email: '', password: '' })
 </script>
 
 <template>
@@ -68,6 +70,26 @@ let movies = ref(movieArray)
       </li>
     </ul>
   </div>
+  <hr />
+  <div>
+    <form @submit.prevent>
+      <input type="text" placeholder="Enter your name" v-model="formData.username" />
+      <input type="email" placeholder="Enter your email" v-model="formData.email" />
+      <input type="password" placeholder="Enter your password" v-model="formData.password" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h1>{{ formData.username }}</h1>
+    <h1>{{ formData.email }}</h1>
+    <h1>{{ formData.password }}</h1>
+  </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+form {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+</style>
