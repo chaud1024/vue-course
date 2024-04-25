@@ -1,10 +1,10 @@
 <script setup>
-import RefComponent1 from './components/RefComponent1.vue'
+import ToggleFriends from './components/ToggleFriends.vue'
 </script>
 
 <template>
   <div>
-    <RefComponent1 />
+    <ToggleFriends />
   </div>
 </template>
 
