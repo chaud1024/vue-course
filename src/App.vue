@@ -1,14 +1,10 @@
 <script setup>
-import LifecycleComponent from './components/LifecycleComponent.vue'
-
-import { ref } from 'vue'
-const showHide = ref(true)
+import MultipleSources from './components/MultipleSources.vue'
 </script>
 
 <template>
   <div>
-    <LifecycleComponent v-if="showHide" />
-    <button @click="showHide = !showHide">Show / Hide</button>
+    <MultipleSources />
   </div>
 </template>
 
