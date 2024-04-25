@@ -1,29 +1,52 @@
 <script setup>
-import SlotComponent from './components/SlotComponent.vue'
-import FallbackContent from './components/FallbackContent.vue'
+import { provide } from 'vue'
+
+import ProvideComponent from './components/ProvideComponent.vue'
+
+provide('name', 'Paul')
+provide('age', 20)
+provide('location', ['Paris', 'France'])
+
+provide('friends', ['Johanson', 'Alex', 'Harry'])
+
+provide('games', {
+  id: 1,
+  title: 'Game of Thrones',
+  genre: ['Action', 'Fantasy', 'Drama'],
+  platform: ['PS4', 'Xbox', 'PC'],
+  relaseDate: '2023-03-15',
+  developer: {
+    name: 'George Martin',
+    location: 'San Francisco, USA'
+  }
+})
+
+provide('movies', [
+  {
+    title: 'Inception',
+    genre: ['Action', 'Sci-Fi', 'Drama'],
+    year: 2010,
+    casts: ['Leonardo Di Caprio', 'Cillian Murphy', 'Domhnall Gleeson']
+  },
+  {
+    title: 'Interstellar',
+    genre: ['Sci-Fi', 'Drama', 'Adventure'],
+    year: 2014,
+    casts: ['Matthew McConaughey', 'Anne Hathaway', 'Jessica Chastain']
+  },
+  {
+    title: 'The Prestige',
+    genre: ['Drama', 'Mystery', 'Thriller'],
+    year: 2006,
+    casts: ['Christian Bale', 'Hugh Jackman', 'Scarlett Johansson']
+  }
+])
 </script>
 
 <template>
-  <SlotComponent>
-    <h1>Hey there!</h1>
-    <h2>Hey there!</h2>
-  </SlotComponent>
-  <hr />
-  <FallbackContent></FallbackContent>
-  <FallbackContent>
-    <h3>hihihihi</h3>
-  </FallbackContent>
-  <hr />
-  <h1>Named Slot</h1>
-  <SlotComponent>
-    <!--v-slot:name-->
-    <template v-slot:first>
-      <h1>This content will go to slot named "first"</h1>
-    </template>
-    <template #second>
-      <h1>This content will go to slot named "second"</h1>
-    </template>
-  </SlotComponent>
+  <div>
+    <ProvideComponent />
+  </div>
 </template>
 
 <style scoped></style>
