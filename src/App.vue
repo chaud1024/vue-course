@@ -1,10 +1,10 @@
 <script setup>
-import ToggleFriends from './components/ToggleFriends.vue'
+import CustomDirective from './components/CustomDirective.vue'
 </script>
 
 <template>
   <div>
-    <ToggleFriends />
+    <CustomDirective />
   </div>
 </template>
 
