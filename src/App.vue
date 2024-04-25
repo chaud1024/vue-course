@@ -1,10 +1,10 @@
 <script setup>
-import MultipleSources from './components/MultipleSources.vue'
+import RefComponent1 from './components/RefComponent1.vue'
 </script>
 
 <template>
   <div>
-    <MultipleSources />
+    <RefComponent1 />
   </div>
 </template>
 
