@@ -1,10 +1,12 @@
 <script setup>
-import DynamicComponentMain from './components/DynamicComponentMain.vue'
+import FetchData from './components/FetchData.vue'
+import AxiosData from './components/AxiosData.vue'
 </script>
 
 <template>
   <div>
-    <DynamicComponentMain />
+    <FetchData />
+    <AxiosData />
   </div>
 </template>
 
