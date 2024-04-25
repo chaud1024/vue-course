@@ -1,10 +1,10 @@
 <script setup>
-import CustomDirective from './components/CustomDirective.vue'
+import DynamicComponentMain from './components/DynamicComponentMain.vue'
 </script>
 
 <template>
   <div>
-    <CustomDirective />
+    <DynamicComponentMain />
   </div>
 </template>
 
